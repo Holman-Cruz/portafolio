@@ -12,6 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="registro.php"></script>
     <title>Holman Cruz</title>
 </head>
 
@@ -31,10 +32,10 @@
             <div class="collapse navbar-collapse  justify-content-end" id="navbarTogglerDemo02">
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
-                        <a class="nav-link active fw-bold" aria-current="page" href="index.html"><i class="bi bi-house-door-fill"></i> Inicio</a>
+                        <a class="nav-link active fw-bold" aria-current="page" href="index.php"><i class="bi bi-house-door-fill"></i> Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="conoceme.html"><i class="bi bi-people-fill"></i> Conóceme</a>
+                        <a class="nav-link " href="conoceme.php"><i class="bi bi-people-fill"></i> Conóceme</a>
                     </li>
                 </ul>
             </div>
@@ -201,16 +202,16 @@
                   </div>
                 </div>
                 <div class="col-md-6 mb-5">    
-                  <form class="row g-3" action="enviar_correo.php" method="POST">
+                  <form class="row g-3" action="registro.php" method="POST" enctype="multipart/form-data">
                     <h3>Formulario de contacto</h3>
                     <div class="col-md-4">
-                      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
+                      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre completo" required>
                     </div>
                     <div class="col-md-4">
                       <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required>
                     </div>
                     <div class="col-md-4">
-                      <input type="text" class="form-control" id="phone" name="phone" placeholder="Teléfono" required>
+                      <input type="number" class="form-control" id="telefono" name="telefono" placeholder="Teléfono" required>
                     </div>
                     <div class="input-group">
                       <span class="input-group-text">Mensaje</span>
@@ -218,14 +219,14 @@
                     </div>
                     <div class="col-8">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck" name="politic" required>
+                        <input class="form-check-input" type="checkbox" id="gridCheck" name="autorizacion" required>
                         <label class="form-check-label" for="gridCheck">
                           <a class="hovw link-light" data-bs-toggle="modal" href="#tdp" role="button">Acepta el tratamiento de datos personales.</a>                  
                         </label>
                       </div>
                     </div>
                     <div class="col-4">
-                      <button type="submit" class="btn btn-light">Enviar</button>
+                      <button type="submit" name="submit" class="btn btn-light">Enviar</button>
                     </div>
                   </form>
                 </div>

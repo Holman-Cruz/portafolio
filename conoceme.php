@@ -21,7 +21,7 @@
   <!-- Barra de navegación -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid container">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="index.php">
         <img src="img/favicon-holman-cruz.webp" alt="Logo" width="50" height="50"
           class="d-inline-block align-text-middle">
         Holman Cruz
@@ -33,10 +33,10 @@
       <div class="collapse navbar-collapse  justify-content-end" id="navbarTogglerDemo02">
         <ul class="nav justify-content-end">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="index.html"><i class="bi bi-house-door-fill"></i> Inicio</a>
+            <a class="nav-link" aria-current="page" href="index.php"><i class="bi bi-house-door-fill"></i> Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active fw-bold" href="Conoceme.html"><i class="bi bi-people-fill"></i> Conóceme</a>
+            <a class="nav-link active fw-bold" href="Conoceme.php"><i class="bi bi-people-fill"></i> Conóceme</a>
           </li>
         </ul>
       </div>
@@ -114,70 +114,68 @@
   </section>
   <!-- Footer -->
   <footer>
-    <section id="footer">
-      <div class="container-fluid pt-3">
-        <div class="row px-3 pt-3">
-          <div class="col-md-4 mb-5">
-            <div class="row">
-              <h3>Certificaciones*</h3>
-              <div class="col-5">
-                <a href="https://www.credly.com/badges/81637263-e7ad-424f-abac-e61d1ead1222/public_url"
-                  title="Ir conocer la certificación" target="_blank"><img class="imgdefault"
-                    src="img/cyber-security-foundation-professional-certificate-csfpc.webp"
-                    alt="Certificación CSFPC"></a>
-              </div>
-              <div class="col-5">
-                <a href="https://www.credly.com/badges/12031ed9-e7a1-4d6c-9271-f9336a871e96/public_url"
-                  title="Ir conocer la certificación" target="_blank"><img class="imgdefault"
-                    src="img/scrum-master-professional-certificate-smpc.webp" alt="Certificación SMPC"></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 mb-5">
-            <form class="row g-3" action="enviar_correo.php" method="POST">
-              <h3>Formulario de Contacto</h3>
-              <div class="col-md-4">
-                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
-              </div>
-              <div class="col-md-4">
-                <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required>
-              </div>
-              <div class="col-md-4">
-                <input type="text" class="form-control" id="phone" name="phone" placeholder="Teléfono" required>
-              </div>
-              <div class="input-group">
-                <span class="input-group-text">Mensaje</span>
-                <textarea class="form-control" id="mensaje" name="mensaje" required></textarea>
-              </div>
-              <div class="col-8">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="gridCheck" name="politic" required>
-                  <label class="form-check-label" for="gridCheck">
-                    <a class="hovw link-light" data-bs-toggle="modal" href="#tdp" role="button">Acepta el tratamiento de
-                      datos personales.</a>
-                  </label>
+        <section id="footer">
+            <div class="container-fluid pt-3">
+              <div class="row px-3 pt-3">
+                <div class="col-md-4 mb-5">
+                  <div class="row">
+                    <h3>Certificaciones</h3>
+                    <div class="col-5">
+                      <a href="https://www.credly.com/badges/81637263-e7ad-424f-abac-e61d1ead1222/public_url" title="Ir conocer la certificación" target="_blank"><img
+                          class="imgdefault" src="img/cyber-security-foundation-professional-certificate-csfpc.webp"
+                          alt="Certificación CSFPC"></a>
+                    </div>
+                    <div class="col-5">
+                      <a href="https://www.credly.com/badges/12031ed9-e7a1-4d6c-9271-f9336a871e96/public_url" title="Ir conocer la certificación" target="_blank"><img
+                          class="imgdefault" src="img/scrum-master-professional-certificate-smpc.webp"
+                          alt="Certificación SMPC"></a>
+                    </div>
+                  </div>
                 </div>
+                <div class="col-md-6 mb-5">    
+                  <form class="row g-3" action="registro.php" method="POST" enctype="multipart/form-data">
+                    <h3>Formulario de contacto</h3>
+                    <div class="col-md-4">
+                      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="number" class="form-control" id="telefono" name="telefono" placeholder="Teléfono" required>
+                    </div>
+                    <div class="input-group">
+                      <span class="input-group-text">Mensaje</span>
+                      <textarea class="form-control" id="mensaje" name="mensaje" required></textarea>
+                    </div>
+                    <div class="col-8">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck" name="autorizacion" required>
+                        <label class="form-check-label" for="gridCheck">
+                          <a class="hovw link-light" data-bs-toggle="modal" href="#tdp" role="button">Acepta el tratamiento de datos personales.</a>                  
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <button type="submit" name="submit" class="btn btn-light">Enviar</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-md-2 ps-3 mb-5">
+                  <h3 class="mb-4">Redes</h3>
+                  <p class="mb-2 hovw"><a class="link-light" href="https://www.linkedin.com/in/holman-cruz" target="_blank"
+                      title="Ir al enlace"><i class="bi bi-linkedin"> /in/holman-cruz/</i></a><br></p>
+                  <p class="mb-2 hovw"><a class="link-light" href="https://www.behance.net/holmancruzde53" target="_blank"
+                      title="Ir al enlace"><i class="bi bi-behance"> /holmancruzde53</i></a><br></p>
+                  <p class="mb-2 hovw"><a class="link-light" href="https://github.com/Holman-Cruz" target="_blank"
+                      title="Ir al enlace"><i class="bi bi-github"> /Holman-Cruz</i></a></p>
+                </div>
+                <hr>
+                <p class="text-center">Copyright © 2023</p>
               </div>
-              <div class="col-4">
-                <button type="submit" class="btn btn-light">Enviar</button>
-              </div>
-            </form>
-          </div>
-          <div class="col-md-2 ps-3 mb-5">
-            <h3 class="mb-4">Redes</h3>
-            <p class="mb-2 hovw"><a class="link-light" href="https://www.linkedin.com/in/holman-cruz" target="_blank"
-                title="Ir al enlace"><i class="bi bi-linkedin"> /in/holman-cruz/</i></a><br></p>
-            <p class="mb-2 hovw"><a class="link-light" href="https://www.behance.net/holmancruzde53" target="_blank"
-                title="Ir al enlace"><i class="bi bi-behance"> /holmancruzde53</i></a><br></p>
-            <p class="mb-2 hovw"><a class="link-light" href="https://github.com/Holman-Cruz" target="_blank"
-                title="Ir al enlace"><i class="bi bi-github"> /Holman-Cruz</i></a></p>
-          </div>
-          <hr>
-          <p class="text-center">Copyright © 2023</p>
-        </div>
-      </div>
-    </section>
-  </footer>
+            </div>    
+          </section>
+    </footer>
 
 
   <!-- Conexión a script por CDN de Bootstrap -->
